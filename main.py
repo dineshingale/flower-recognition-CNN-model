@@ -43,7 +43,9 @@ def train_model():
     )
 
 
-    model.save("flower_model.keras")
+    os.makedirs("models", exist_ok=True)
+    model.save("models/flower_model.keras")
+
     print("Model trained and saved as flower_model.keras")
 
 if __name__ == "__main__":
