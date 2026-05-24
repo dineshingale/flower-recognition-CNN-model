@@ -1,4 +1,5 @@
 import wandb
+import os
 from wandb.integration.keras import WandbMetricsLogger # New Callback
 from src.data_engine import DataEngine
 from src.pipeline import FlowerPipeline
