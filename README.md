@@ -1,3 +1,3 @@
-# Flower Recognition Project
+# Flower Classifiaction CNN 
 
-A deep learning flower classification project using TensorFlow, FastAPI, and Weights & Biases.
+A deep learning CNN flower classification project using TensorFlow, FastAPI, and Weights & Biases.
