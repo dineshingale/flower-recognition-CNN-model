@@ -9,15 +9,15 @@ class DataEngine:
         self.data_dir = None
 
     def download_data(self):
-        """Downloads and extracts the dataset."""
+    
         self.data_dir = tf.keras.utils.get_file('flower_photos', origin=self.dataset_url, untar=True)
         return self.data_dir
 
     def create_metadata_df(self):
-        # Path where Keras downloads the data
+        # path where keras downloads the data
         base_path = self.data_dir 
         
-        # Check if there is a nested 'flower_photos' folder
+        # check if there is a nested 'flower_photos' folder
         nested_path = os.path.join(base_path, 'flower_photos')
         if os.path.exists(nested_path):
             base_path = nested_path
@@ -47,7 +47,7 @@ class DataEngine:
 
     def clean_and_split(self, df, test_size=0.2):
         """
-        Applies cleaning and prevents Data Leakage by splitting 
+        applies cleaning and prevents Data Leakage by splitting 
         before any synthetic feature generation.
         """
         df = df[df['image_path'].str.endswith(('.jpg', '.jpeg', '.png'))]

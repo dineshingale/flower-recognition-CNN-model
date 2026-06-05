@@ -9,7 +9,7 @@ class FlowerPipeline:
 
     def _parse_function(self, filename, label):
         """
-        Data Engineering: Reading, Decoding, and Scaling.
+        data engineering: reading, decoding, and scaling.
         """
         image_string = tf.io.read_file(filename)
         image = tf.image.decode_jpeg(image_string, channels=3)
@@ -20,7 +20,7 @@ class FlowerPipeline:
 
     def create_dataset(self, df):
         """
-        Converts Pandas DataFrame to a high-performance tf.data Dataset.
+        converts pandas dataframe to a high-performance tf.data Dataset.
         """
         if self.class_names is None:
             self.class_names = sorted(df['label'].unique())
@@ -37,4 +37,4 @@ class FlowerPipeline:
         return ds
 
 if __name__ == "__main__":
-    print("Pipeline module loaded. Ready to transform Series data into Tensors.")
+    print("pipeline module loaded. Ready to transform Series data into Tensors.")

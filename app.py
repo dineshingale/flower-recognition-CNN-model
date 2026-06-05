@@ -10,9 +10,8 @@ MODEL = tf.keras.models.load_model("flower_model.keras")
 CLASS_NAMES = ['daisy', 'dandelion', 'roses', 'sunflowers', 'tulips']
 
 def preprocess_image(image_bytes):
-    """
-    Data Transformation: Scale and resize incoming images to match training.
-    """
+
+    # scale and resize incoming images to match training.
     img = Image.open(io.BytesIO(image_bytes))
     img = img.resize((180, 180))
     img_array = np.array(img) / 255.0

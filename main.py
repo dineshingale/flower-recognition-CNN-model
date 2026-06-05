@@ -13,6 +13,7 @@ BATCH_SIZE = 32
 EPOCHS = 20
 
 def train_model():
+    # for logging the metrics, configure wandb
     wandb.init(project="flower-recognition", config={
         "learning_rate": 0.001,
         "epochs": EPOCHS,

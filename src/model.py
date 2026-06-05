@@ -6,10 +6,7 @@ class FlowerCNN:
         self.num_classes = num_classes
 
     def build_model(self):
-        """
-        Constructs a CNN architecture using Conv2D, BatchNormalization, 
-        ReLU, and Dropout layers.
-        """
+        
         model = models.Sequential([
             layers.Input(shape=self.input_shape),
             layers.Conv2D(32, (3, 3), padding='same'),
